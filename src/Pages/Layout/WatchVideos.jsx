@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import VideosFeed from "../../Components/VideosFeed/VideosFeed";
 
 const WatchVideos = () => {

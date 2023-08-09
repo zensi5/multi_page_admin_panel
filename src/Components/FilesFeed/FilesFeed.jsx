@@ -1,23 +1,15 @@
 import React from "react";
-import "./FilesFeed.scss";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/free-mode";
 import { FreeMode } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { Images } from "../../assets/images/images";
+import { ReactComponent as Upload } from "../../assets/svgs/download.svg";
+import { ReactComponent as Search } from "../../assets/svgs/search.svg";
+import Button from "../Button/Button";
 import CustomSelect from "../CustomSelect/CustomSelect";
 import SearchBar from "../SearchBar/SearchBar";
-import { ReactComponent as Search } from "../../assets/svgs/search.svg";
-import { ReactComponent as Upload } from "../../assets/svgs/download.svg";
-import { ReactComponent as DownArrow } from "../../assets/svgs/downArrow.svg";
-import { ReactComponent as Figma } from "../../assets/svgs/figma.svg";
-import { ReactComponent as Diamond } from "../../assets/svgs/diamond.svg";
-import { ReactComponent as Picture } from "../../assets/svgs/picture.svg";
-import { ReactComponent as File } from "../../assets/svgs/file.svg";
-import { ReactComponent as Pdf } from "../../assets/svgs/pdf.svg";
-import Button from "../Button/Button";
-import ProfileImage from "../ProfileImage/ProfileImage";
-import MoreOption from "../MoreOption/MoreOption";
 import Table from "../Table/Table";
+import "./FilesFeed.scss";
 
 function FilesFeed() {
   const language = [

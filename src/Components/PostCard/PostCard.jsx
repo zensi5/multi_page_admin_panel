@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
 import "./PostCard.scss";
 import ProfileImage from "../ProfileImage/ProfileImage";
 import MoreOption from "../MoreOption/MoreOption";
@@ -81,7 +80,7 @@ const PostCard = ({
 
         {img && (
           <div className="justify-center">
-            <img src={img} alt="image" />
+            <img src={img} alt="card" />
           </div>
         )}
       </div>

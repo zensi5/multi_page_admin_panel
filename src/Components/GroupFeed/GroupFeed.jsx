@@ -1,19 +1,16 @@
 import React, { useState } from "react";
-import "./GroupFeed.scss";
 import { Images } from "../../assets/images/images";
 import { ReactComponent as Plus } from "../../assets/svgs/plus.svg";
+import "./GroupFeed.scss";
 
-import ProfileImage from "../ProfileImage/ProfileImage";
-import Button from "../Button/Button";
-import MoreOption from "../MoreOption/MoreOption";
-import PostCard from "../PostCard/PostCard";
-import TabsComponent from "../TabComponent/TabComponent";
-import AboutFeed from "../TabsFeed/AboutFeed";
-import MediaFeed from "../TabsFeed/MediaFeed";
-import EventFeed from "../TabsFeed/EventFeed";
 import WatchVideos from "../../Pages/Layout/WatchVideos";
+import Button from "../Button/Button";
+import ProfileImage from "../ProfileImage/ProfileImage";
 import TabComponent from "../TabComponent/TabComponent";
 import Table from "../Table/Table";
+import AboutFeed from "../TabsFeed/AboutFeed";
+import EventFeed from "../TabsFeed/EventFeed";
+import MediaFeed from "../TabsFeed/MediaFeed";
 
 function GroupFeed() {
   const [activeTab, setActiveTab] = useState(0);

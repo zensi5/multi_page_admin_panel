@@ -1,18 +1,14 @@
 import React from "react";
-import "./Table.scss";
-import { ReactComponent as Search } from "../../assets/svgs/search.svg";
-import { ReactComponent as Upload } from "../../assets/svgs/download.svg";
 import { Images } from "../../assets/images/images";
-
+import "./Table.scss";
+import { ReactComponent as Diamond } from "../../assets/svgs/diamond.svg";
 import { ReactComponent as DownArrow } from "../../assets/svgs/downArrow.svg";
 import { ReactComponent as Figma } from "../../assets/svgs/figma.svg";
-import { ReactComponent as Diamond } from "../../assets/svgs/diamond.svg";
-import { ReactComponent as Picture } from "../../assets/svgs/picture.svg";
 import { ReactComponent as File } from "../../assets/svgs/file.svg";
 import { ReactComponent as Pdf } from "../../assets/svgs/pdf.svg";
-import Button from "../Button/Button";
-import ProfileImage from "../ProfileImage/ProfileImage";
+import { ReactComponent as Picture } from "../../assets/svgs/picture.svg";
 import MoreOption from "../MoreOption/MoreOption";
+import ProfileImage from "../ProfileImage/ProfileImage";
 
 function Table() {
   const table = [

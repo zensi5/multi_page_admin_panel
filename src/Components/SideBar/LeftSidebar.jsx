@@ -1,19 +1,15 @@
 import React, { useState } from "react";
-import "./LeftSidebar.scss";
-import ProfileImage from "../ProfileImage/ProfileImage";
-import { Images } from "../../assets/images/images";
-import { ReactComponent as Feed } from "../../assets/svgs/feed.svg";
-import { ReactComponent as Friend } from "../../assets/svgs/friends.svg";
-import { ReactComponent as Clipboard } from "../../assets/svgs/clipboard.svg";
-import { ReactComponent as Youtube } from "../../assets/svgs/youtube.svg";
-import { ReactComponent as Picture } from "../../assets/svgs/picture.svg";
-import { ReactComponent as File } from "../../assets/svgs/file.svg";
-import { ReactComponent as Cart } from "../../assets/svgs/cart.svg";
-import { ReactComponent as DownArrow } from "../../assets/svgs/downArrow.svg";
-import { ReactComponent as UpArrow } from "../../assets/svgs/upArrow.svg";
-import { ReactComponent as Hamburger } from "../../assets/svgs/hamburger.svg";
 import { Link } from "react-router-dom";
+import { Images } from "../../assets/images/images";
+import { ReactComponent as DownArrow } from "../../assets/svgs/downArrow.svg";
+import { ReactComponent as Feed } from "../../assets/svgs/feed.svg";
+import { ReactComponent as File } from "../../assets/svgs/file.svg";
+import { ReactComponent as Hamburger } from "../../assets/svgs/hamburger.svg";
+import { ReactComponent as UpArrow } from "../../assets/svgs/upArrow.svg";
+import { ReactComponent as Youtube } from "../../assets/svgs/youtube.svg";
 import Button from "../Button/Button";
+import ProfileImage from "../ProfileImage/ProfileImage";
+import "./LeftSidebar.scss";
 
 function LeftSidebar({ collapsed, setCollapsed }) {
   const [submenu, setSubmenu] = useState(false);
@@ -32,24 +28,9 @@ function LeftSidebar({ collapsed, setCollapsed }) {
       icon: <Feed />,
     },
     {
-      title: "Friends",
-      link: "/firends",
-      icon: <Friend />,
-    },
-    {
-      title: "Event",
-      link: "/clipboard",
-      icon: <Clipboard />,
-    },
-    {
       title: "Watch Videos",
       link: "/watchvideos",
       icon: <Youtube />,
-    },
-    {
-      title: "Photo",
-      link: "/picture",
-      icon: <Picture />,
     },
     {
       title: "Files",
@@ -57,14 +38,16 @@ function LeftSidebar({ collapsed, setCollapsed }) {
       icon: <File />,
     },
     {
-      title: "Marketplace",
-      link: "/cart",
-      icon: <Cart />,
+      title: "Group",
+      link: "/homepage",
+      icon: <Feed />,
     },
     {
-      // title: "SHORTCUTS",
-      //  link: "/shortcuts",
-      // icon: images.Logo,
+      title: "Files",
+      link: "/filespage",
+      icon: <File />,
+    },
+    {
       iconOpened: (
         <div className="shortcutWrapper">
           <span className="shortcutBtn">SHORTCUTS</span>

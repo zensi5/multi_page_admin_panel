@@ -1,15 +1,14 @@
-import React, { useState, useEffect } from "react";
-import "./Navbar.scss";
-import SearchBar from "../SearchBar/SearchBar";
+import { LogoutOutlined, MailOutlined, UserOutlined } from "@ant-design/icons";
+import React, { useState } from "react";
 import { Images } from "../../assets/images/images";
-import { Popover, Timeline, Avatar } from "antd";
-import { UserOutlined, MailOutlined, LogoutOutlined } from "@ant-design/icons";
 import { ReactComponent as Adduser } from "../../assets/svgs/addUser.svg";
+import { ReactComponent as DownArrow } from "../../assets/svgs/downArrow.svg";
+import { ReactComponent as Hamburger } from "../../assets/svgs/hamburger.svg";
 import { ReactComponent as Notification } from "../../assets/svgs/notification.svg";
 import { ReactComponent as Settings } from "../../assets/svgs/settings.svg";
 import ProfileImage from "../ProfileImage/ProfileImage";
-import { ReactComponent as DownArrow } from "../../assets/svgs/downArrow.svg";
-import { ReactComponent as Hamburger } from "../../assets/svgs/hamburger.svg";
+import SearchBar from "../SearchBar/SearchBar";
+import "./Navbar.scss";
 
 function Navbar({ title, collapsed, setCollapsed }) {
   // const [isOpen, setIsOpen] = useState(true);

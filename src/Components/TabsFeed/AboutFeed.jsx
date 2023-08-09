@@ -1,20 +1,17 @@
 import React from "react";
-import "./AboutFeed.scss";
 import { Images } from "../../assets/images/images";
-import { ReactComponent as Plus } from "../../assets/svgs/plus.svg";
-import { ReactComponent as Video } from "../../assets/svgs/video.svg";
+import { ReactComponent as Clipboard } from "../../assets/svgs/eventboard.svg";
+import { ReactComponent as Location } from "../../assets/svgs/location.svg";
 import { ReactComponent as Picture } from "../../assets/svgs/picture.svg";
+import { ReactComponent as Shield } from "../../assets/svgs/shield.svg";
 import { ReactComponent as Smile } from "../../assets/svgs/smile.svg";
 import { ReactComponent as Unlock } from "../../assets/svgs/unlock.svg";
+import { ReactComponent as Video } from "../../assets/svgs/video.svg";
 import { ReactComponent as Visible } from "../../assets/svgs/visible.svg";
-import { ReactComponent as Location } from "../../assets/svgs/location.svg";
-import { ReactComponent as Shield } from "../../assets/svgs/shield.svg";
-import { ReactComponent as Clipboard } from "../../assets/svgs/eventboard.svg";
-import ProfileImage from "../ProfileImage/ProfileImage";
-import Button from "../Button/Button";
 import MoreOption from "../MoreOption/MoreOption";
 import PostCard from "../PostCard/PostCard";
-import TabsComponent from "../TabComponent/TabComponent";
+import ProfileImage from "../ProfileImage/ProfileImage";
+import "./AboutFeed.scss";
 function LoginForm() {
   return (
     <div className="d-flex">

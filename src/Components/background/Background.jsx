@@ -1,8 +1,7 @@
-import { React, useState } from "react";
-import "./Background.scss";
-import { ReactComponent as DownArrow } from "../../assets/svgs/downArrow.svg";
+import { React } from "react";
 import { Images } from "../../assets/images/images";
 import CustomSelect from "../CustomSelect/CustomSelect";
+import "./Background.scss";
 
 function Background() {
   const language = [

@@ -1,0 +1,134 @@
+@import "../../Styles/global.scss";
+
+
+.videoWrapper {
+
+    .setting {
+        display: flex;
+        gap: 20px;
+
+        .moreMenu {
+            display: inline;
+            width: auto;
+        }
+
+        @media (max-width: 575px) {
+            align-items: flex-start;
+            justify-content: flex-end;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+    }
+
+    .postVideo {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 23px;
+    }
+
+    .reactBar {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .detailBox {
+        .title {
+            @include typography(22px, $text2, 600, 23px);
+            margin-bottom: 31px;
+
+            @media (max-width: 575px) {
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+        }
+
+        .details {
+            @include typography(14px, $text3, 500, 28px);
+
+            @media (max-width: 575px) {
+                font-size: 12px;
+                line-height: 26px;
+            }
+        }
+    }
+
+}
+
+.onPlay {
+    height: 42px;
+    width: 42px;
+    background: $transparent1;
+    position: relative;
+    border: none;
+    border-radius: 50%;
+
+    .playBtn {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-left: 10px solid $primary1;
+        top: 40%;
+        left: 43%;
+    }
+}
+
+.videoLeft {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    margin-bottom: 28px;
+
+    h4 {
+        @include typography(14px, $text2, 600, 22px);
+
+        @media (max-width: 575px) {
+            font-size: 12px;
+        }
+    }
+
+    p {
+        @include typography(12px, $text4, 500, 17px);
+    }
+
+    .logo {
+        img {
+            border-radius: 50%;
+        }
+    }
+}
+
+.mockup {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 21px;
+
+    img {
+        border-radius: 15px;
+        width: 100%;
+    }
+}
+
+.likeBtn {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    background-color: $bg3;
+    border-radius: 15px;
+    @include typography(14px, $text4, 600, 29px);
+    padding: 10px 78px;
+    border: none;
+    margin: auto;
+    width: 100%;
+
+    @media (max-width: 575px) {
+        padding: 10px 20px;
+    }
+}

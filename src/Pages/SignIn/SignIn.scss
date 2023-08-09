@@ -1,0 +1,18 @@
+@import "../../Styles/global.scss";
+
+.auth {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 35px;
+
+  .pswd {
+    @include typography(16px, $text4, 500, 24px);
+  }
+
+  @media (max-width: 575px) {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 16px;
+  }
+}

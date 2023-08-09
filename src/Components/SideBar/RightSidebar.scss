@@ -1,0 +1,91 @@
+@import "../../Styles/global.scss";
+
+.rightSidebar {
+  background-color: $bg4;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-width: 250px;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  //  padding-right: 35px;
+  padding-top: 100px;
+
+  @media (max-width: 1200px) {
+    width: 56px;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+
+  .search {
+    .searchBar {
+      @media (max-width: 1200px) {
+        width: 10px;
+        padding: 27px;
+        height: 10px;
+        margin-bottom: 16px;
+      }
+    }
+  }
+}
+
+.rightHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @media (max-width: 1200px) {
+    align-items: center;
+  }
+}
+
+.rightWrapper {
+  margin-bottom: 20px;
+  margin-top: 34px;
+  @include typography(12px, $text4, 500, 29px);
+
+  @media (max-width: 1200px) {
+    display: none;
+  }
+}
+
+.rightItem {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  margin-bottom: 30px;
+  max-width: 223px;
+  width: 100%;
+
+  .itemContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    .itemName {
+      @include typography(14px, $text2, 600, 29px);
+
+      @media (max-width: 1200px) {
+        display: none;
+      }
+    }
+
+
+  }
+}
+
+.itemNumber {
+  width: 19px;
+  height: 19px;
+  background-color: #FF5630;
+  border-radius: 50%;
+  @include typography(12px, $bg4, 500, 29px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

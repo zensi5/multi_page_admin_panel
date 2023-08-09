@@ -1,0 +1,24 @@
+@import "../../Styles/global.scss";
+
+.btnWrapper {
+  display: flex;
+  gap: 30px;
+
+  .btn {
+    display: flex;
+    align-items: center;
+    background-color: $bg3;
+    padding: 14px 30px;
+    border-radius: 15px;
+    gap: 13px;
+    @include typography(16px, $text4, 500, 30px);
+
+    @media (max-width: 1200px) {
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    display: inline;
+  }
+}

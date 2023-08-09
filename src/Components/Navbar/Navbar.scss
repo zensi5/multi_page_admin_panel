@@ -1,0 +1,227 @@
+@import "../../Styles/global.scss";
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $bg4;
+  position: fixed;
+  padding-left: 250px;
+  // position: relative;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  height: 100px;
+  //   padding-left: 250px;
+
+  .profile {
+    margin-right: 15px;
+    cursor: pointer;
+
+    @media (max-width: 768px) {
+      position: absolute;
+      right: 10px;
+      top: 17px;
+      margin-right: auto;
+    }
+  }
+
+  .search {
+    margin-left: 20px;
+
+    .label {
+      @media (max-width: 1200px) {
+        position: absolute;
+        top: 13px;
+        left: 14px;
+      }
+    }
+
+    input {
+      @media (max-width: 1200px) {
+        padding: 17px 3px 12px 45px;
+      }
+
+      @media (max-width: 575px) {
+        background-color: transparent;
+        padding-bottom: 3px;
+      }
+    }
+
+    .suffixIcon {
+      @media (max-width: 1200px) {
+        display: none;
+      }
+    }
+
+    @media (max-width: 1200px) {
+      max-width: 48px;
+      margin-right: 0;
+    }
+
+    @media (max-width: 768px) {
+      // position: absolute;
+      // bottom: 11px;
+      // left: 76px;
+      margin-right: 20px;
+    }
+  }
+
+  .title {
+    @include typography(24px, $text1, 600, 23px);
+    margin-left: 35px;
+
+    @media (max-width: 575px) {
+      margin-left: 15px;
+      font-size: 20px;
+    }
+  }
+
+  .navMenu {
+    display: none;
+
+    @media (max-width: 768px) {
+      display: inline;
+    }
+  }
+
+  @media (max-width: 768px) {
+    min-height: 145px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    //padding-top: 12px;
+    padding: 10px;
+  }
+}
+
+.navData {
+  //margin-left: 34px;
+  //margin-right: 12px;
+  // width: 100%;
+  display: flex;
+  align-items: center;
+
+  .widgets {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 40px;
+    width: 100%;
+
+    & > * {
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      padding-top: 10px;
+    }
+  }
+
+  @media (max-width: 575px) {
+    margin-left: 0;
+    justify-content: space-around;
+  }
+
+  @media (max-width: 768px) {
+    border-top: 1px solid $bg3;
+    width: 100%;
+    //  margin-left: 30px;
+  }
+}
+
+// .notificationPopover {
+//   width: 280px;
+// }
+
+// .settingsPopover {
+//   width: 180px;
+// }
+.widgetsContent {
+  position: relative;
+}
+.notiPopover {
+  position: absolute;
+  right: -128px;
+  top: 46px;
+
+  .notiWrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+
+    .notiContent {
+      margin-left: 15px;
+    }
+
+    .notiTitle {
+      @include typography(14px, $text2, 500, 24px);
+      white-space: nowrap;
+      width: 182px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .notiDescription {
+      @include typography(12px, $text4, 500, 20px);
+    }
+  }
+
+  &:hover {
+    overflow-y: auto;
+  }
+}
+.userPopover {
+  position: absolute;
+  top: 32px;
+  right: -24px;
+}
+.settings {
+  position: absolute;
+  right: -47px;
+  top: 41px;
+  width: 200px;
+  padding: 10px;
+
+  li {
+    @include typography(14px, $text2, 600, 29px);
+  }
+}
+
+.dropdown {
+  padding: 25px;
+  background-color: $bg4;
+  border-radius: 10px;
+  @include typography(14px, $text3, 600, 29px);
+  box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08),
+    0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: 133px;
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff;
+    transform: rotate(45deg);
+  }
+}
+
+.dropdownProfile {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 83px;
+  width: 200px;
+
+  .profileTitle {
+    @include typography(16px, $text2, 600, 29px);
+  }
+
+  .profileItems {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+  }
+}

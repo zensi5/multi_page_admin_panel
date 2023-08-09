@@ -1,0 +1,53 @@
+@import "../../Styles/global.scss";
+
+.fields {
+  position: relative;
+
+  .label {
+    position: absolute;
+    top: 16px;
+    left: 17px;
+  }
+
+  input {
+    width: 100%;
+    border-radius: 15px;
+    padding: 17px 15px 15px 50px;
+    //  margin-bottom: 30px;
+    border: 1px solid $inputBorder;
+    background-color: $bg4;
+    @include typography(16px, $text1, 500);
+  }
+
+  .suffixWrapper {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+  }
+
+  .primary {
+    border: 1px solid $primary1;
+    box-shadow: 0px 12px 23px 0px #377dff0f;
+  }
+
+  .success {
+    border: 1px solid $primary2;
+    box-shadow: 0px 12px 23px 0px #38cb890f;
+  }
+}
+
+.danger {
+  border-radius: 15px;
+  border: 1px solid red;
+  box-shadow: 0px 12px 23px 0px #ff56300f;
+  @include typography(14px, red, 500, 24px);
+
+  &::after {
+    content: "Please enter a valid email address.";
+    position: absolute;
+    padding-top: 7px;
+  }
+}

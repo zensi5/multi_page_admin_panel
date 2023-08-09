@@ -1,0 +1,16 @@
+@import "../../Styles/global.scss";
+
+.btnPrimary {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $primary1;
+  border: none;
+  transition: background-color 0.5s ease-in;
+
+  &:hover {
+    background-color: #346ace;
+    transition: background-color 0.5s ease-in;
+  }
+}

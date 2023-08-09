@@ -1,0 +1,12 @@
+.moreMenu {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-right: 25px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.ant-popover-inner-content {
+    cursor: pointer;
+}

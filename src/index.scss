@@ -1,0 +1,12 @@
+@import './Styles/grid.scss';
+@import './Styles/reset.scss';
+@import './Styles/helper.scss';
+
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

@@ -1,0 +1,77 @@
+@import "../../Styles/global.scss";
+
+.tablecontainer {
+  overflow-x: scroll;
+  width: 100%;
+}
+
+.table {
+  width: 100%;
+  border-radius: 15px;
+  background: $bg4;
+  width: 100%;
+  padding: 36px;
+  overflow: auto;
+  border-collapse: separate;
+}
+
+.tableHead {
+  width: 100%;
+  border-radius: 15px;
+  background: $bg3;
+
+  th {
+    padding: 20px;
+
+    &:first-child {
+      border-radius: 15px 0 0 15px;
+    }
+
+    &:last-child {
+      border-radius: 0 15px 15px 0;
+    }
+  }
+
+  .thead {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    @include typography(12px, $text2, 600, 24px);
+  }
+}
+
+.tableRow {
+  .tableName {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    @include typography(12px, $text2, 600, 24px);
+
+    .tableIcon {
+      border-radius: 10px;
+      // padding: 9px 12px;
+      width: 37px;
+      height: 37px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  td {
+    text-align: left;
+    padding: 30px;
+  }
+
+  .tableCell {
+    @include typography(12px, $text2, 600, 24px);
+
+    .tableProfile {
+      display: flex;
+
+      .profileContainer {
+        margin-left: -10px;
+      }
+    }
+  }
+}

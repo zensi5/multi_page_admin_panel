@@ -1,0 +1,32 @@
+@import "../../Styles/global.scss";
+
+.profileContainer {
+  position: relative;
+
+  .badge {
+    position: absolute;
+    bottom: 5px;
+    right: 3px;
+    background-color: $primary2;
+    border: 1.2px solid $bg3;
+    font-size: 12px;
+    border-radius: 10px;
+    width: 10px;
+    height: 10px;
+  }
+
+  .profileImage {
+    border-radius: 50%;
+  }
+
+  .morePeople {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 32px;
+    border: 1.5px solid $bg4;
+    background: $bg1;
+    @include typography(12px, white, 500, 29px);
+    padding: 10px 8px;
+  }
+}

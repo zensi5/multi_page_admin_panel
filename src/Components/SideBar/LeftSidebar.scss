@@ -1,0 +1,169 @@
+@import "../../Styles/global.scss";
+
+.leftSidebar {
+  background-color: $bg4;
+  overflow-y: auto;
+  overflow-x: hidden;
+  // transition: all 1s ease;
+  max-width: 250px;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 3;
+  border-right: 1px solid $bg2;
+
+  &.collapsed {
+    width: 75px;
+    //transition: all 1.5s ease;
+
+    .sidebarItem {
+      display: block;
+      text-align: center;
+
+      .itemName {
+        display: none;
+      }
+    }
+
+    .userWrapper {
+      justify-content: center;
+      padding: 9px 20px;
+
+      .userInfo {
+        display: none;
+      }
+    }
+
+    .shortcutWrapper {
+      display: none;
+    }
+
+    .sidebarSubmenu {
+      display: none;
+    }
+
+    .sidebarButton {
+      display: none;
+    }
+
+    .sidebarPages {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+}
+
+.shortcutWrapper {
+  margin-bottom: 24px;
+
+  .shortcutBtn {
+    @include typography(12px, $text4, 500, 29px);
+    margin-right: 92px;
+    margin-left: 15px;
+  }
+}
+
+.selected {
+  border-radius: 15px;
+  background: $bg3;
+}
+
+.sideLogo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 17px 10px;
+
+  img {
+    height: 41px;
+  }
+
+  .hamburger {
+    display: flex;
+    cursor: pointer;
+
+    // @media (max-width: 768px) {
+    //   display: none;
+    // }
+  }
+
+  &.collapsed {
+    flex-direction: column;
+  }
+}
+
+.userWrapper {
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  background: $bg3;
+  padding: 24px 20px;
+  margin: 0 17px 32px 17px;
+  gap: 14px;
+
+  .userInfo {
+    h4 {
+      @include typography(12px, $text2, 600, 20px);
+    }
+
+    p {
+      @include typography(12px, $text4, 500, 15px);
+    }
+  }
+}
+
+.sidebarPages {
+  padding-left: 17px;
+  padding-right: 17px;
+
+  .sidebarItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 11px 10px;
+    gap: 11px;
+    color: $text4;
+  }
+
+  .itemName {
+    @include typography(14px, $text3, 500, 29px);
+  }
+}
+
+.sidebarSubmenu {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 33px;
+
+  img {
+    @include typography(14px, $text2, 600, 29px);
+    margin-left: 15px;
+  }
+
+  .submenuContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    .submenuName {
+      @include typography(14px, $text2, 600, 29px);
+    }
+  }
+}
+
+.sidebarButton {
+  @include typography(14px, $text4, 600, 29px);
+  padding: 11px 64px;
+  border: none;
+  cursor: pointer;
+  border-radius: 15px;
+  background-color: $bg3;
+  width: 100%;
+}

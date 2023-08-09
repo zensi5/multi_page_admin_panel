@@ -1,0 +1,33 @@
+@import "../../Styles/global.scss";
+
+.checkWrapper {
+  display: flex;
+  align-items: center;
+  padding-right: 17px;
+
+  .title {
+    @include typography(16px, $text4, 500, 24px);
+  }
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  height: 18px;
+  width: 18px;
+  background: #efefef;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+input[type="checkbox"] {
+  & + label {
+    padding-left: 10px;
+    cursor: pointer;
+  }
+}
+input[type="checkbox"] {
+  &:checked {
+    background: url("../../assets/svgs/tick.svg") $primary1 no-repeat center;
+  }
+}

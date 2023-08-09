@@ -1,0 +1,10 @@
+@import "./mixins.scss";
+@import "./variables.scss";
+
+::placeholder {
+  @include typography(16px, $text4, 500, 30px);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

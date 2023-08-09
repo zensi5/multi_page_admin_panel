@@ -1,0 +1,46 @@
+@import "../../Styles/global.scss";
+
+.tabs {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+  color: rgba(0, 0, 0, 0.6);
+  display: inline-block;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+
+  .tabWrapper {
+    display: flex;
+    margin-top: 15px;
+    margin-left: 32px;
+    margin-bottom: 20px;
+    // border-top: 2px solid $bg2;
+    overflow: auto;
+  }
+
+  .tab {
+    position: relative;
+    z-index: 1;
+    padding-top: 15px;
+    margin-left: 25px;
+    border-top: 2px solid transparent;
+    @include typography(14px, $text4, 600, 29px);
+
+    &.active {
+      background: none;
+      border-top: 2px solid $primary1;
+      color: $primary1;
+    }
+  }
+
+  .tabline {
+    position: absolute;
+    left: 0;
+    top: 14px;
+    height: 2px;
+    background-color: $bg2;
+    width: 100%;
+    transition: width 0.3s ease;
+  }
+}

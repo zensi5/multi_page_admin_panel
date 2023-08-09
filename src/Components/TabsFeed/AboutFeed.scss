@@ -1,0 +1,341 @@
+@import "../../Styles/global.scss";
+
+.groupThumbnail {
+    // margin: 30px 30px 0 30px;
+    border-radius: 20px;
+    background-color: $bg4;
+    margin-bottom: 20px;
+
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px 20px 0 0;
+    }
+}
+
+.groupInfo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $bg4;
+    margin: 30px 23px 30px 25px;
+
+    .infoData {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 22px;
+
+        .infoLogo {
+            width: 64px;
+            height: 64px;
+            border-radius: 64px;
+        }
+
+        .data {
+            text-align: left;
+
+            @media (max-width: 575px) {
+                text-align: center;
+            }
+        }
+
+        h3 {
+            @include typography(20px, $text2, 600, 23px);
+        }
+
+        p {
+            @include typography(16px, $text4, 500, 29px);
+        }
+
+        @media (max-width: 575px) {
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+    }
+
+    @media (max-width: 575px) {
+        flex-direction: column;
+    }
+}
+
+.groupMembers {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    .users {
+        display: flex;
+
+        .profileContainer {
+            margin-left: -10px;
+
+            img {
+                border: 1.5px solid $bg4;
+            }
+
+            &:first-of-type {
+                margin-left: 0;
+            }
+        }
+    }
+
+    .joinBtn {
+        display: flex;
+        align-items: center;
+        @include typography(14px, $bg4, 600, 29px);
+        border: none;
+        border-radius: 15px;
+        padding: 11px 23px;
+        gap: 7px;
+        cursor: pointer;
+
+        .icon {
+            display: flex;
+        }
+    }
+
+    @media (max-width: 575px) {
+        flex-direction: column;
+    }
+}
+
+.menuGroup {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 25px;
+    position: relative;
+    padding-bottom: 20px;
+
+    .slideAxis {
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        background-color: $bg2;
+
+        .slideLine {
+            position: absolute;
+            bottom: 0;
+            height: 2px;
+            width: 80px;
+            margin-left: 20px;
+            background-color: blue;
+            transition: transform 0.3s ease-in-out;
+        }
+    }
+
+    .menuTab {
+        text-align: center;
+        cursor: pointer;
+        margin-top: 15px;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        .tabTitle {
+            @include typography(14px, $text4, 600, 29px);
+            padding: 15px 25px 20px 35px;
+        }
+    }
+
+    .active {
+        color: $primary1;
+    }
+}
+
+
+.createPost {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    background-color: $bg4;
+    border-radius: 15px;
+    margin-bottom: 20px;
+
+    .postDetails {
+        display: flex;
+        margin-bottom: 21px;
+
+        .postInput {
+            width: 100%;
+            background-color: $bg3;
+            border-radius: 15px;
+            padding: 12px 15px;
+            border: none;
+            margin-left: 15px;
+
+            &::placeholder {
+                font-size: 12px;
+            }
+        }
+    }
+
+}
+
+.postActions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+
+    li {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-right: 18px;
+        margin-left: 18px;
+
+        p {
+            @include typography(12px, $text4, 500, 29px);
+
+            @media (max-width:575px) {
+                display: none;
+            }
+        }
+
+        &:first-of-type {
+            margin-left: 12px;
+
+            @media (max-width: 575px) {
+                margin-left: 0;
+            }
+        }
+
+        @media (max-width: 575px) {
+            margin-left: 0;
+        }
+    }
+}
+
+.post {
+    .suffixIcon {
+        display: block;
+
+        @media (max-width:575px) {
+            display: none;
+        }
+    }
+}
+
+hr {
+    width: 1px;
+    height: 22px;
+    border: 1px solid $bg3;
+    background-color: $bg3;
+}
+
+.cardBody {
+    background-color: $bg4;
+    border-radius: 15px;
+    padding: 23px 24px 29px 25px;
+    margin-left: 14px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: min-content;
+
+    @media (max-width: 575px) {
+        margin-left: auto;
+    }
+
+    @media (max-width: 1200px) {
+        margin-left: 0;
+    }
+}
+
+.cardTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 23px;
+
+    h3 {
+        @include typography(16px, $text2, 600, 29px);
+
+        @media (max-width: 575px) {
+            font-size: 14px;
+        }
+    }
+
+    p {
+        @include typography(12px, $primary1, 500, 17px);
+    }
+}
+
+.cardHeader {
+    p {
+        @include typography(14px, $text4, 500, 28px);
+    }
+}
+
+.cardContent {
+    li {
+        display: flex;
+        justify-self: flex-start;
+        gap: 18px;
+        margin-bottom: 26px;
+
+        h3 {
+            @include typography(16px, $text2, 600, 28px);
+        }
+
+        p {
+            @include typography(12px, $text4, 500, 21px);
+        }
+    }
+}
+
+.cardTile {
+    background-color: $transparent1;
+    margin-bottom: 13px;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    gap: 17px;
+    padding: 21px 15px;
+
+    .cardIcon {
+        border-radius: 26px;
+        background: $secondary1;
+        width: 38px;
+        height: 38px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .tileData {
+        h5 {
+            @include typography(14px, $text2, 600, 20px);
+        }
+
+        p {
+            @include typography(12px, $text4, 500, 21px);
+        }
+    }
+}
+
+.cardMedia {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+
+    .media {
+        display: flex;
+        gap: 12px;
+    }
+
+    .image {
+        min-width: 120px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 15px;
+        display: flex;
+    }
+}

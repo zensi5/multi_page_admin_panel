@@ -1,0 +1,20 @@
+@import "../../Styles/global.scss";
+
+.heading {
+  @include typography(26px, $text1, 700, 20px);
+  margin-bottom: 25px;
+
+  @media (max-width: 575px) {
+    font-size: 24px;
+  }
+}
+
+.subHeading {
+  @include typography(18px, $text3, 500, 15px);
+  margin-bottom: 30px;
+
+  @media (max-width: 575px) {
+    font-size: 16px;
+    line-height: 21px;
+  }
+}

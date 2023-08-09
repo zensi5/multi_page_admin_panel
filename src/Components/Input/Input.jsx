@@ -15,7 +15,7 @@ function Input({
 }) {
   return (
     <form className="fields">
-      <label forname={forLabel} className="label">
+      <label htmlFor={forLabel} className="label">
         {prefix}
       </label>
       <input

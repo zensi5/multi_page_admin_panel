@@ -35,7 +35,7 @@ function ForgotPwd() {
         />
       </Link>
 
-      <Link to="/SignIn" className="redirect">
+      <Link to="/" className="redirect">
         <LeftArrow />
         <span>Back to Sign In</span>
       </Link>

@@ -133,64 +133,6 @@ function FilesFeed() {
               />
             </div>
           </div>
-
-          {/* <div className="tablecontainer">
-            <table class="table">
-              <tbody>
-                <tr className="tableHead">
-                  <th>
-                    <div className="thead">
-                      <h4>NAME</h4>
-                      <DownArrow />
-                    </div>
-                  </th>
-                  <th>
-                    <div className="thead">
-                      <h4>LAST EDIT</h4>
-                      <DownArrow />
-                    </div>
-                  </th>
-                  <th>
-                    <div className="thead">
-                      <h4>SIZE</h4>
-                      <DownArrow />
-                    </div>
-                  </th>
-                  <th>
-                    <div className="thead">
-                      <h4>MEMBERS</h4>
-                      <DownArrow />
-                    </div>
-                  </th>
-                  <th></th>
-                </tr>
-                {table.map((data, key) => {
-                  return (
-                    <tr key={key} className="tableRow">
-                      <td className="tableName">
-                        <span
-                          style={{
-                            backgroundColor: data.bgColor,
-                            color: data.color,
-                          }}
-                          className="tableIcon"
-                        >
-                          {data.icon}
-                        </span>
-                        <p>{data.title}</p>
-                      </td>
-                      <td className="tableCell">{data.date}</td>
-                      <td className="tableCell">{data.size}</td>
-                      <td className="tableCell"> {data.profile}</td>
-                      <td className="tableCell">
-                        <MoreOption />
-                      </td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div> */}
           <Table />
         </div>
       </div>
